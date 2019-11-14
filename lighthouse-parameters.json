@@ -1,0 +1,22 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "mspOfferName": {
+            "value": "Soda Digital"
+        },
+        "mspOfferDescription": {
+            "value": "Azure Services Managed By Soda Digital"
+        },
+        "managedByTenantId": {
+            "value": "2b6c67b1-5293-40a7-8aea-0dcc01491bf7"
+        },
+        "authorizations": {
+            "value": [{
+                "principalId": "660af00b-ad7e-4fed-9767-88f6eb523d0c",
+                "principalIdDisplayName": "Soda Digital Contributor",
+                "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c"
+            }]
+        }
+    }
+}
