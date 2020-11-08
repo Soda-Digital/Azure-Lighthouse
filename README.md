@@ -1,7 +1,14 @@
 
+# Establish Partner
+
+In MS Partner Network, generate link to onboard new Partner. Need to do this before actioning the below.
+
+
 # Admin On Behalf Of (AOBO)
 
-`az role assignment create --role owner --assignee-object-id 4c20a97a-a661-4973-b3e1-d11abf11cb53 --assignee-principal-type ForeignGroup --scope /subscriptions/{subId}`
+When logged in as admin of customer tennant.
+
+`az role assignment create --role owner --assignee-object-id 4c20a97a-a661-4973-b3e1-d11abf11cb53 --assignee-principal-type ForeignGroup --scope /subscriptions/beb674a2-28d0-4927-b2eb-a01189fee26d`
 
 
 # Azure-Lighthouse

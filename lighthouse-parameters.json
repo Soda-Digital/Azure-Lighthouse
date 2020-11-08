@@ -13,10 +13,11 @@
         },
         "authorizations": {
             "value": [{
-                "principalId": "8b787e76-7a7f-4f9b-b80b-2b86eaa29844",
+                "principalId": "6af1cbe2-d8c8-4de1-bb89-08ac6555031e",
                 "principalIdDisplayName": "Soda Digital Contributor",
                 "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c"
             }]
         }
     }
 }
+
