@@ -4,18 +4,21 @@
     "parameters": {
         "mspOfferName": {
             "type": "string",
+            "defaultValue": "Soda Digital",
             "metadata": {
                 "description": "Specify the name of the offer from the Managed Service Provider"
             }
         },
         "mspOfferDescription": {
             "type": "string",
+            "defaultValue": "Azure Services Managed By Soda Digital",
             "metadata": {
                 "description": "Name of the Managed Service Provider offering"
             }
         },
         "managedByTenantId": {
             "type": "string",
+            "defaultValue": "2b6c67b1-5293-40a7-8aea-0dcc01491bf7",
             "metadata": {
                 "description": "Specify the tenant id of the Managed Service Provider"
             }
