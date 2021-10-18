@@ -8,7 +8,7 @@ In MS Partner Network, generate link to onboard new Partner. Need to do this bef
 
 When logged in as admin of customer tennant.
 
-`az role assignment create --role owner --assignee-object-id 4c20a97a-a661-4973-b3e1-d11abf11cb53 --scope /subscriptions/{newSubId}`
+`az role assignment create --role owner --assignee-object-id 4c20a97a-a661-4973-b3e1-d11abf11cb53 --scope /subscriptions/{newSubId} --assignee-principal-type ForeignGroup`
 
 
 # Azure-Lighthouse
