@@ -3,16 +3,14 @@ targetScope = 'subscription'
 @description('Specify the principalId of the object to be projected as the Managed Service Provider')
 param principalId string
 
-@description('Specify the name of the offer from the Managed Service Provider')
 var mspOfferName = 'Soda Digital'
 
-@description('Name of the Managed Service Provider offering')
+
 var mspOfferDescription = 'Azure Services Managed By Soda Digital'
 
-@description('Specify the tenant id of the Managed Service Provider')
+
 var managedByTenantId = '2b6c67b1-5293-40a7-8aea-0dcc01491bf7'
 
-@description('Specify an array of objects, containing tuples of Azure Active Directory principalId, a Azure roleDefinitionId, and an optional principalIdDisplayName. The roleDefinition specified is granted to the principalId in the provider\'s Active Directory and the principalIdDisplayName is visible to customers.')
 var authorizations = [
   {
     principalId: principalId
