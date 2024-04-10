@@ -1,5 +1,6 @@
 targetScope = 'subscription'
 
+@description('Specify the principalId of the object to be projected as the Managed Service Provider')
 param principalId string
 
 @description('Specify the name of the offer from the Managed Service Provider')
