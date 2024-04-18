@@ -19,6 +19,11 @@ var authorizations = [
   }
   {
     principalId: principalId
+    principalIdDisplayName: 'Soda Digital Managed Services Registration assignment Delete Role'
+    roleDefinitionId: '91c1777a-f3dc-4fae-b103-61d183457e46' //contributor
+  }
+  {
+    principalId: principalId
     principalIdDisplayName: 'Soda Digital Managed ID RBAC Administrator'
     roleDefinitionId: '18d7d88d-d35e-4fb5-a5c3-7773c20a72d9'
     delegatedRoleDefinitionIds: [
