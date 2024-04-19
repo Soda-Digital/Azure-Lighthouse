@@ -1,0 +1,84 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.26.170.59819",
+      "templateHash": "2586408907997134929"
+    }
+  },
+  "parameters": {
+    "principalId": {
+      "type": "string",
+      "metadata": {
+        "description": "Specify the principalId of the object to be projected as the Managed Service Provider"
+      }
+    }
+  },
+  "variables": {
+    "mspOfferName": "Soda Digital",
+    "mspOfferDescription": "Azure Services Managed By Soda Digital",
+    "managedByTenantId": "2b6c67b1-5293-40a7-8aea-0dcc01491bf7",
+    "authorizations": [
+      {
+        "principalId": "[parameters('principalId')]",
+        "principalIdDisplayName": "Soda Digital Contributor",
+        "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c"
+      },
+      {
+        "principalId": "[parameters('principalId')]",
+        "principalIdDisplayName": "Soda Digital Managed Services Registration assignment Delete Role",
+        "roleDefinitionId": "91c1777a-f3dc-4fae-b103-61d183457e46"
+      },
+      {
+        "principalId": "[parameters('principalId')]",
+        "principalIdDisplayName": "Soda Digital Managed ID RBAC Administrator",
+        "roleDefinitionId": "18d7d88d-d35e-4fb5-a5c3-7773c20a72d9",
+        "delegatedRoleDefinitionIds": [
+          "b24988ac-6180-42a0-ab88-20f7382dd24c",
+          "ba92f5b4-2d11-453d-a403-e96b0029c9fe",
+          "7f951dda-4ed3-4680-a7ca-43fe172d538d",
+          "00482a5a-887f-4fb3-b363-3b7fe8e74483",
+          "f25e0fa2-a7c8-4377-a976-54943a77a395"
+        ]
+      }
+    ],
+    "mspRegistrationName": "[guid(variables('mspOfferName'))]",
+    "mspAssignmentName": "[guid(variables('mspOfferName'))]"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.ManagedServices/registrationDefinitions",
+      "apiVersion": "2022-10-01",
+      "name": "[variables('mspRegistrationName')]",
+      "properties": {
+        "registrationDefinitionName": "[variables('mspOfferName')]",
+        "description": "[variables('mspOfferDescription')]",
+        "managedByTenantId": "[variables('managedByTenantId')]",
+        "authorizations": "[variables('authorizations')]"
+      }
+    },
+    {
+      "type": "Microsoft.ManagedServices/registrationAssignments",
+      "apiVersion": "2022-10-01",
+      "name": "[variables('mspAssignmentName')]",
+      "properties": {
+        "registrationDefinitionId": "[subscriptionResourceId('Microsoft.ManagedServices/registrationDefinitions', variables('mspRegistrationName'))]"
+      },
+      "dependsOn": [
+        "[subscriptionResourceId('Microsoft.ManagedServices/registrationDefinitions', variables('mspRegistrationName'))]"
+      ]
+    }
+  ],
+  "outputs": {
+    "mspOfferName": {
+      "type": "string",
+      "value": "[format('Managed by {0}', variables('mspOfferName'))]"
+    },
+    "authorizations": {
+      "type": "array",
+      "value": "[variables('authorizations')]"
+    }
+  }
+}
