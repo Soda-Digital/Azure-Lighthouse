@@ -9,4 +9,4 @@
 
 `az deployment sub create --location "australiaeast" --subscription {subscriptionId} --template-uri https://raw.githubusercontent.com/Soda-Digital/Azure-Lighthouse/main/lighthouse.bicep`
 
-You will be promted for a `principleId` - copy the value provided by Soda Digital.
+You will be promted for a `principalId` - copy the value provided by Soda Digital.
