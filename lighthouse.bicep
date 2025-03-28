@@ -19,11 +19,6 @@ var authorizations = [
   }
   {
     principalId: principalId
-    principalIdDisplayName: 'Soda Digital Key Vault Admin'
-    roleDefinitionId: '00482a5a-887f-4fb3-b363-3b7fe8e74483' //kv admin
-  }
-  {
-    principalId: principalId
     principalIdDisplayName: 'Soda Digital Managed Services Registration assignment Delete Role'
     roleDefinitionId: '91c1777a-f3dc-4fae-b103-61d183457e46' //Registration assignment Delete Role
   }
