@@ -8,7 +8,7 @@
 
 ## What this does
 
-Running this process will provide a means for a "Group" within the Soda Digital tenant to have delegated, restricted access, to a subscription within your tenant.
+Running this process will provide a means for a "Group" within the Soda Digital tenant to have delegated, restricted access to a subscription within your tenant.
 
 Specifically the roles that will provided are:
 
