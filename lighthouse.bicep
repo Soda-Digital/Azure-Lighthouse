@@ -37,6 +37,7 @@ var authorizations = [
       'e147488a-f6f5-4113-8e2d-b22465e65bf6' //Key Vault Crypto Service Encryption User
       '4633458b-17de-408a-b874-0445c86b69e6' //Key Vault Secrets User
       '09976791-48a7-449e-bb21-39d1a415f350' //Communication and Email Service Owner
+      '43d0d8ad-25c7-4714-9337-8ba259a9fe05' //Monitoring Reader
     ]
   }
 ]
